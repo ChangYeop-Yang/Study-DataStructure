@@ -69,4 +69,4 @@ int main(void)
     cout << Kruskal(num1, num2) << endl;
  
     return 0;
-}
+}.
