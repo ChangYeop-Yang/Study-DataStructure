@@ -67,4 +67,4 @@ int main(void)
 	prim();
 
 	return 0;
-}
+}.
