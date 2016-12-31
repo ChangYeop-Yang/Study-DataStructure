@@ -59,4 +59,4 @@ TreePtr threadInorder(TreePtr node)
         printf("[%c] ", temporary->data);
         temporary = findThread(temporary);
     } while (temporary);
-}
+}.
