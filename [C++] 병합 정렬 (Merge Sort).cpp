@@ -38,3 +38,20 @@ void merger(int * mArr, int first, int mid, int last)
 
 	delete[] mSumArr;
 }
+
+void mergerSort(int * mArr, int first, int last)
+{
+	int middle;
+
+	if (first < last) /* First가 작다는 Last보다 작은 것은 더 분할을 할 수 있다는 뜻이다. */
+	{
+		middle = (first + last) / 2; /* 중간 지점을 계산한다. */
+
+		/* 둘로 나눠서 각각을 정렬한다. */
+		mergerSort(mArr, first, middle); /* First ~ Middle에 위치한 데이터 정렬 */
+		mergerSort(mArr, middle + 1, last); /* Middle+1 ~ Last에 위치한 데이터 정렬 */
+		
+		/* 정렬된 두 배열을 병합한다. */
+		merger(mArr, first, middle, last); /* 정렬 된 두 배열을 병합한다. */
+	}
+}
