@@ -23,6 +23,8 @@
 
 * 프린터의 출력 처리나 윈도 시스템의 메시지 처리기, 프로세스 관리 등 데이터가 입력된 시간 순서대로 처리해야 할 필요가 있는 상황에 이용된다.
 
+* * *
+
 #### # Deque (덱 구조)
 양쪽 끝에서 삽입과 삭제가 모두 가능한 자료 구조의 한 형태이다. 두 개의 포인터를 사용하여, 양쪽에서 삭제와 삽입을 발생 시킬 수 있다.
 
@@ -42,6 +44,23 @@
 - 구현이 쉽지 않다.
 - 랜덤 한 접근이 가능하다.
 
+* * *
+
+#### # Circular Queue (환형 큐)
+A circular buffer, circular queue, cyclic buffer or ring buffer is a data structure that uses a single, fixed-size buffer as if it were connected end-to-end. This structure lends itself easily to buffering data streams.
+
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Circular_Buffer_Animation.gif/400px-Circular_Buffer_Animation.gif" />
+</p>
+
+* 원형 버퍼(영어: circular buffer)는 고정된 크기의 버퍼를 양 끝이 연결된 것처럼 사용할 수 있게 해주는 자료 구조이다. 원형 버퍼를 이용하면 거의 성능 저하 없이 단순 배열을 덱처럼 사용할 수 있다.
+
+```c++
+increment_address_one = (address + 1) % Length
+
+decrement_address_one = (address + Length -1) % Length
+```
+
 ## ★ 비선형 구조
 
 ## ★ REFERENCE
@@ -50,3 +69,4 @@
 * [Stack - 위키백과](https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%83%9D)
 * [Deque - 위키백과](https://ko.wikipedia.org/wiki/%EB%8D%B1_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0))
 * [About STL : C++ STL 프로그래밍(5)-덱(deque) : (1) - 한빛출판네트워크](http://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS3942847236)
+* [Circular buffer - 위키백과](https://en.wikipedia.org/wiki/Circular_buffer)
