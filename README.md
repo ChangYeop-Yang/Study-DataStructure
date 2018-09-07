@@ -53,8 +53,6 @@ A circular buffer, circular queue, cyclic buffer or ring buffer is a data struct
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Circular_Buffer_Animation.gif/400px-Circular_Buffer_Animation.gif" />
 </p>
 
-* 원형 버퍼(영어: circular buffer)는 고정된 크기의 버퍼를 양 끝이 연결된 것처럼 사용할 수 있게 해주는 자료 구조이다. 원형 버퍼를 이용하면 거의 성능 저하 없이 단순 배열을 덱처럼 사용할 수 있다.
-
 ```c++
 increment_address_one = (address + 1) % Length
 
