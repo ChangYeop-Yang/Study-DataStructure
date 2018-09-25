@@ -86,7 +86,7 @@ void recalsiveDFS(int index, int length) {
 	isVisit[index] = true;
 	cout << index << endl;
 
-	for (int ii = 1; ii <= length; ii++) {
+	for (int ii = 0; ii < length; ii++) {
 		if (!isVisit[ii] && vertaxs[index][ii] == 1) { recalsiveDFS(ii, length); }
 	}
 }
@@ -107,7 +107,7 @@ void stackDFS(int index, int length) {
 		
 		const int box = stx.top(); stx.pop();
 
-		for (int ii = 1; ii <= length; ii++) {
+		for (int ii = 0; ii < length; ii++) {
 			if (!isVisit[ii] && vertaxs[box][ii] == 1) {
 				stx.push(ii);
 				isVisit[ii] = true;
