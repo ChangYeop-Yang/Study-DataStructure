@@ -75,6 +75,51 @@ decrement_address_one = (address + Length -1) % Length
 ##### ※ 이진 트리(二進-, 영어: binary tree)
 각각의 노드가 최대 두 개의 자식 노드를 가지는 트리 자료 구조로, 자식 노드를 각각 왼쪽 자식 노드와 오른쪽 자식 노드라고 한다. 단순히 집합론의 개념을 사용하는 재귀적 정의에서 (비어있지 않은) 이진 트리는 하나의 튜플 (L, S, R)로, L과 R은 이진 트리 또는 공집합이고 S는 싱글턴 집합이다. 일부 구현자는 공집합인 이진 트리도 허용한다.
 
+## ★ Graph
+
+#### # DFS (Depth First Serarch)
+이 우선 탐색(depth-first search: DFS)은 맹목적 탐색방법의 하나로 탐색트리의 최근에 첨가된 노드를 선택하고, 이 노드에 적용 가능한 동작자 중 하나를 적용하여 트리에 다음 수준(level)의 한 개의 자식노드를 첨가하며, 첨가된 자식 노드가 목표노드일 때까지 앞의 자식 노드의 첨가 과정을 반복해 가는 방식이다.
+
+##### ※ Recalsive DFS Source Code
+```C++
+void recalsiveDFS(int index, int length) {
+	isVisit[index] = true;
+	cout << index << endl;
+
+	for (int ii = 1; ii <= length; ii++) {
+		if (!isVisit[ii] && vertaxs[index][ii] == 1) { recalsiveDFS(ii, length); }
+	}
+}
+```
+
+* * *
+
+##### ※ Stack DFS Source Code
+```C++
+void stackDFS(int index, int length) {
+	
+	stack<int> stx;
+
+	stx.push(index);
+	isVisit[index] = true;
+
+	while (!stx.empty()) {
+		
+		const int box = stx.top(); stx.pop();
+
+		for (int ii = 1; ii <= length; ii++) {
+			if (!isVisit[ii] && vertaxs[box][ii] == 1) {
+				stx.push(ii);
+				isVisit[ii] = true;
+			}
+		}
+
+		// Output
+		cout << box << endl;
+	}
+}
+```
+
 ## ★ REFERENCE
 * [자료 구조 - 위키백과](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)
 * [Queue - 위키백과](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
@@ -82,3 +127,4 @@ decrement_address_one = (address + Length -1) % Length
 * [Deque - 위키백과](https://ko.wikipedia.org/wiki/%EB%8D%B1_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0))
 * [About STL : C++ STL 프로그래밍(5)-덱(deque) : (1) - 한빛출판네트워크](http://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS3942847236)
 * [Circular buffer - 위키백과](https://en.wikipedia.org/wiki/Circular_buffer)
+* [깊이 우선 탐색 - 위키백과](https://ko.wikipedia.org/wiki/%EA%B9%8A%EC%9D%B4_%EC%9A%B0%EC%84%A0_%ED%83%90%EC%83%89)
