@@ -80,6 +80,13 @@ decrement_address_one = (address + Length -1) % Length
 #### # DFS (Depth First Serarch)
 이 우선 탐색(depth-first search: DFS)은 맹목적 탐색방법의 하나로 탐색트리의 최근에 첨가된 노드를 선택하고, 이 노드에 적용 가능한 동작자 중 하나를 적용하여 트리에 다음 수준(level)의 한 개의 자식노드를 첨가하며, 첨가된 자식 노드가 목표노드일 때까지 앞의 자식 노드의 첨가 과정을 반복해 가는 방식이다.
 
+|장점|단점|
+|:--:|:--:|
+|현 경로상의 노드들만을 기억하면 되므로 저장 공간의 수요가 비교적 적다.|해가 없는 경로에 깊이 빠질 가능성이 있다. 따라서 실제의 경우 미리 지정한 임의의 깊이까지만 탐색하고 목표노드를 발견하지 못하면 다음의 경로를 따라 탐색하는 방법이 유용할 수 있다.|
+|목표노드가 깊은 단계에 있을 경우 해를 빨리 구할 수 있다.|얻어진 해가 최단 경로가 된다는 보장이 없다. 이는 목표에 이르는 경로가 다수인 문제에 대해 깊이우선 탐색은 해에 다다르면 탐색을 끝내버리므로, 이때 얻어진 해는 최적이 아닐 수도 있다.|
+
+* * *
+
 ##### ※ Recalsive DFS Source Code
 ```C++
 void recalsiveDFS(int index, int length) {
@@ -119,6 +126,8 @@ void stackDFS(int index, int length) {
 	}
 }
 ```
+
+* * *
 
 ## ★ REFERENCE
 * [자료 구조 - 위키백과](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)
