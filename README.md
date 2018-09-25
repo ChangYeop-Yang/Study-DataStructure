@@ -80,6 +80,10 @@ decrement_address_one = (address + Length -1) % Length
 #### # DFS (Depth First Serarch)
 이 우선 탐색(depth-first search: DFS)은 맹목적 탐색방법의 하나로 탐색트리의 최근에 첨가된 노드를 선택하고, 이 노드에 적용 가능한 동작자 중 하나를 적용하여 트리에 다음 수준(level)의 한 개의 자식노드를 첨가하며, 첨가된 자식 노드가 목표노드일 때까지 앞의 자식 노드의 첨가 과정을 반복해 가는 방식이다.
 
+<p align="center">
+	<img src="https://static1.squarespace.com/static/559b400fe4b0dfcd52aea108/t/5898f99620099ed3b8b24601/1487544777373/new_dfs.gif?format=500w" />
+</p>
+
 |장점|단점|
 |:--:|:--:|
 |현 경로상의 노드들만을 기억하면 되므로 저장 공간의 수요가 비교적 적다.|해가 없는 경로에 깊이 빠질 가능성이 있다. 따라서 실제의 경우 미리 지정한 임의의 깊이까지만 탐색하고 목표노드를 발견하지 못하면 다음의 경로를 따라 탐색하는 방법이 유용할 수 있다.|
@@ -137,3 +141,4 @@ void stackDFS(int index, int length) {
 * [About STL : C++ STL 프로그래밍(5)-덱(deque) : (1) - 한빛출판네트워크](http://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS3942847236)
 * [Circular buffer - 위키백과](https://en.wikipedia.org/wiki/Circular_buffer)
 * [깊이 우선 탐색 - 위키백과](https://ko.wikipedia.org/wiki/%EA%B9%8A%EC%9D%B4_%EC%9A%B0%EC%84%A0_%ED%83%90%EC%83%89)
+* [Depth-first Search (DFS) Maze Generation in GameMaker: Studio](https://www.zackbanack.com/blog/dfs)
