@@ -25,3 +25,5 @@ vector<string> split(const string message, const char letter) {
     return bucket;
 }
 ```
+
+## ⌘ C++ My String Type
