@@ -146,6 +146,18 @@ void stackDFS(int index, int length) {
 * 트리 구조에서 각각의 노드를 정확히 한 번만, 체계적인 방법으로 방문하는 과정을 말한다. 이는 노드를 방문하는 순서에 따라 분류된다.
 
 ```C++
+typedef struct node {
+	char value;
+	struct node * reftChild;
+	struct node * rightChild;
+
+	node(const char val) {
+		this->value = val;
+		this->reftChild = NULL;
+		this->rightChild = NULL;
+	}
+} Node;
+
 ```
 
 ###### § Preorder (전위순회) - 전위 순회는 깊이 우선 순회(depth-first traversal)라고도 한다.
@@ -206,7 +218,24 @@ void postOrder(Node * node) {
 
 * 레벨 순서 순회(level-order)는 모든 노드를 낮은 레벨부터 차례대로 순회한다. 
 * 레벨 순서 순회는 너비 우선 순회(breadth-first traversal)라고도 한다.
-> Result: F-B-G-A-D-I-C-E-H
+
+```C++
+/* Result: F-B-G-A-D-I-C-E-H */
+void leverOrder(Node * node) {
+
+	queue<Node*> que;
+	que.push(node);
+
+	while (!que.empty()) {
+
+		Node * child = que.front();	que.pop();
+		cout << "※ LevelOrder: " << child->value << endl;
+
+		if (child->reftChild) { que.push(child->reftChild); }
+		if (child->rightChild) { que.push(child->rightChild); }
+	}
+}
+```
 
 ## ★ My Customs Library
 :laughing: [My Customs Library Link](https://github.com/ChangYeop-Yang/Study-DataStructure/blob/master/CustomLibrary.md)
