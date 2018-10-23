@@ -137,7 +137,40 @@ void stackDFS(int index, int length) {
 
 * * *
 
-#### # Post Order
+#### # Tree traversal
+
+<p align="center">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Sorted_binary_tree.svg/250px-Sorted_binary_tree.svg.png" />
+</p>
+
+* 트리 구조에서 각각의 노드를 정확히 한 번만, 체계적인 방법으로 방문하는 과정을 말한다. 이는 노드를 방문하는 순서에 따라 분류된다.
+
+###### § Preorder (전위순회) - 전위 순회는 깊이 우선 순회(depth-first traversal)라고도 한다.
+
+001. 노드를 방문한다.
+002. 왼쪽 서브 트리를 전위 순회한다.
+003. 오른쪽 서브 트리를 전위 순회한다.
+> Result: F->B->A->D->C->E->G->I->H
+
+###### § Inorder (중위순회)
+
+001. 왼쪽 서브 트리를 중위 순회한다.
+002. 노드를 방문한다.
+003. 오른쪽 서브 트리를 중위 순회한다.
+> Result: A->B->C->D->E->F->G->H->I
+
+###### § Postorder (후위순회)
+
+001. 왼쪽 서브 트리를 후위 순회한다.
+002. 오른쪽 서브 트리를 후위 순회한다.
+003. 노드를 방문한다.
+> Result: A->C->E->D->B->H->I->G->F
+
+###### § Level-order (레벨 순서 순회)
+
+* 레벨 순서 순회(level-order)는 모든 노드를 낮은 레벨부터 차례대로 순회한다. 
+* 레벨 순서 순회는 너비 우선 순회(breadth-first traversal)라고도 한다.
+> Result: F-B-G-A-D-I-C-E-H
 
 ## ★ My Customs Library
 :laughing: [My Customs Library Link](https://github.com/ChangYeop-Yang/Study-DataStructure/blob/master/CustomLibrary.md)
@@ -151,3 +184,4 @@ void stackDFS(int index, int length) {
 * [Circular buffer - 위키백과](https://en.wikipedia.org/wiki/Circular_buffer)
 * [깊이 우선 탐색 - 위키백과](https://ko.wikipedia.org/wiki/%EA%B9%8A%EC%9D%B4_%EC%9A%B0%EC%84%A0_%ED%83%90%EC%83%89)
 * [Depth-first Search (DFS) Maze Generation in GameMaker: Studio](https://www.zackbanack.com/blog/dfs)
+* [트리 순회(Tree traversal) - 위키백과](https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%A6%AC_%EC%88%9C%ED%9A%8C)
