@@ -150,21 +150,54 @@ void stackDFS(int index, int length) {
 001. 노드를 방문한다.
 002. 왼쪽 서브 트리를 전위 순회한다.
 003. 오른쪽 서브 트리를 전위 순회한다.
-> Result: F->B->A->D->C->E->G->I->H
+
+```C++
+/* Result: F->B->A->D->C->E->G->I->H*/
+
+void preOrder(Node * node) {
+	if (node) {
+		cout << "※ PreOrder: " << node->value << endl;
+		preOrder(node->reftChild);
+		preOrder(node->rightChild);
+	}
+}
+```
 
 ###### § Inorder (중위순회)
 
 001. 왼쪽 서브 트리를 중위 순회한다.
 002. 노드를 방문한다.
 003. 오른쪽 서브 트리를 중위 순회한다.
-> Result: A->B->C->D->E->F->G->H->I
+
+```C++
+/* Result: Result: A->B->C->D->E->F->G->H->I */
+
+void inOrder(Node * node) {
+	if (node) {
+		inOrder(node->reftChild);
+		cout << "※ InOrder: " << node->value << endl;
+		inOrder(node->rightChild);
+	}
+}
+```
 
 ###### § Postorder (후위순회)
 
 001. 왼쪽 서브 트리를 후위 순회한다.
 002. 오른쪽 서브 트리를 후위 순회한다.
 003. 노드를 방문한다.
-> Result: A->C->E->D->B->H->I->G->F
+
+```C++
+/* Result: Result: A->C->E->D->B->H->I->G->F */
+
+void postOrder(Node * node) {
+	if (node) {
+		postOrder(node->reftChild);
+		postOrder(node->rightChild);
+		cout << "※ PostOrder: " << node->value << endl;
+	}
+}
+```
 
 ###### § Level-order (레벨 순서 순회)
 
