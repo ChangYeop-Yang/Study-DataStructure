@@ -56,7 +56,7 @@ A circular buffer, circular queue, cyclic buffer or ring buffer is a data struct
 ```c++
 increment_address_one = (address + 1) % Length
 
-decrement_address_one = (address + Length -1) % Length
+decrement_address_one = (address + Length - 1) % Length
 ```
 
 ## ★ 비선형 구조
