@@ -74,6 +74,8 @@ decrement_address_one = (address + Length - 1) % Length
 
 * 트리에서 최상위 노드를 루트 노드(root node 뿌리 노드[*])라고 한다. 또한 노드 A가 노드 B를 가리킬 때 A를 B의 부모 노드(parent node), B를 A의 자식 노드(child node)라고 한다. 자식 노드가 없는 노드를 잎 노드(leaf node 리프 노드[*])라고 한다. 잎 노드가 아닌 노드를 내부 노드(internal node)라고 한다.
 
+* * *
+
 ##### ※ B+ Tree
 
 <p align="center">
