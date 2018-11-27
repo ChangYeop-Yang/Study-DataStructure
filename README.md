@@ -74,6 +74,18 @@ decrement_address_one = (address + Length - 1) % Length
 
 * 트리에서 최상위 노드를 루트 노드(root node 뿌리 노드[*])라고 한다. 또한 노드 A가 노드 B를 가리킬 때 A를 B의 부모 노드(parent node), B를 A의 자식 노드(child node)라고 한다. 자식 노드가 없는 노드를 잎 노드(leaf node 리프 노드[*])라고 한다. 잎 노드가 아닌 노드를 내부 노드(internal node)라고 한다.
 
+##### ※ B+ Tree
+
+<p align="center">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Bplustree.png/1024px-Bplustree.png" width="300" height="200" />
+</p>
+
+* B+ 트리(Quaternary Tree라고도 알려져 있음)는 컴퓨터 과학용어로, **키에 의해서 각각 식별되는 레코드의 효율적인 삽입, 검색과 삭제를 통해 정렬된 데이터를 표현하기 위한 트리자료구조**의 일종이다. </br></br>이는 동적이며, 각각의 인덱스 세그먼트 (보통 블록 또는 노드라고 불리는) 내에 최대와 최소범위의 키의 개수를 가지는 다계층 인덱스(multilevel index)로 구성된다. </br></br>B트리와 대조적으로 B+트리는, 모든 레코드들이 트리의 가장 하위 레벨에 정렬되어있다. 오직 키들만이 내부 블록에 저장된다.
+
+* The difference between a B and B+ tree is that, in a B-tree, the keys and data can be stored in both the internal and leaf nodes, whereas in a B+ tree, the data and keys can only be stored in the leaf nodes.
+
+* A B+ tree is the same as a B tree; the only difference is that, in the B+ tree there is an additional level added at the bottom with linked leaves. Also, unlike the B tree, each node in a B+ tree contains only keys and not key–value pairs.
+
 * * *
 
 ##### ※ 이진 트리(二進-, 영어: binary tree)
