@@ -6,6 +6,8 @@
 
 #### # Insert Sorting (삽입정렬)
 
+#### # Quick Sorting (퀵정렬)
+
 ## ★ 선형 구조
 
 #### # Stack (스택 구조)
