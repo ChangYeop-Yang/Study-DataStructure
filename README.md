@@ -258,9 +258,6 @@ void leverOrder(Node * node) {
 }
 ```
 
-## ★ My Customs Library
-:laughing: [My Customs Library Link](https://github.com/ChangYeop-Yang/Study-DataStructure/blob/master/CustomLibrary.md)
-
 ## ★ REFERENCE
 * [자료 구조 - 위키백과](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)
 * [Queue - 위키백과](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
