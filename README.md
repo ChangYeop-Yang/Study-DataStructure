@@ -22,6 +22,8 @@
 
 * 분할된 두 개의 작은 리스트에 대해 재귀(Recursion)적으로 이 과정을 반복한다. 재귀는 리스트의 크기가 0이나 1이 될 때까지 반복된다.
 
+###### ※ Quick Sorting Source Code
+
 ```C++
 #define SWAP(X, Y, Z) Z=X; X=Y; Y=Z;
 
