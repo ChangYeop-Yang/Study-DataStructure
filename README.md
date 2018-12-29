@@ -326,7 +326,7 @@ void leverOrder(Node * node) {
 
 ✈️ [B+ Tree - CS Animated](http://www.csanimated.com/animation.php?t=B-tree)
 
-✈️ [Quick Sort - ](https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC)
+✈️ [Quick Sort - 위키백과](https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC)
 
 ## ★ Developer Information
 
