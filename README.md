@@ -303,17 +303,30 @@ void leverOrder(Node * node) {
 ```
 
 ## ★ REFERENCE
-* [자료 구조 - 위키백과](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)
-* [Queue - 위키백과](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
-* [Stack - 위키백과](https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%83%9D)
-* [Deque - 위키백과](https://ko.wikipedia.org/wiki/%EB%8D%B1_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0))
-* [About STL : C++ STL 프로그래밍(5)-덱(deque) : (1) - 한빛출판네트워크](http://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS3942847236)
-* [Circular buffer - 위키백과](https://en.wikipedia.org/wiki/Circular_buffer)
-* [깊이 우선 탐색 - 위키백과](https://ko.wikipedia.org/wiki/%EA%B9%8A%EC%9D%B4_%EC%9A%B0%EC%84%A0_%ED%83%90%EC%83%89)
-* [Depth-first Search (DFS) Maze Generation in GameMaker: Studio](https://www.zackbanack.com/blog/dfs)
-* [트리 순회(Tree traversal) - 위키백과](https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%A6%AC_%EC%88%9C%ED%9A%8C)
-* [B+ Tree - 위키백과](https://en.wikipedia.org/wiki/B%2B_tree)
-* [B+ Tree - CS Animated](http://www.csanimated.com/animation.php?t=B-tree)
+
+✈️ [자료 구조 - 위키백과](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)
+
+✈️ [Queue - 위키백과](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
+
+✈️ [Stack - 위키백과](https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%83%9D)
+
+✈️ [Deque - 위키백과](https://ko.wikipedia.org/wiki/%EB%8D%B1_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0))
+
+✈️ [About STL : C++ STL 프로그래밍(5)-덱(deque) : (1) - 한빛출판네트워크](http://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS3942847236)
+
+✈️ [Circular buffer - 위키백과](https://en.wikipedia.org/wiki/Circular_buffer)
+
+✈️ [깊이 우선 탐색 - 위키백과](https://ko.wikipedia.org/wiki/%EA%B9%8A%EC%9D%B4_%EC%9A%B0%EC%84%A0_%ED%83%90%EC%83%89)
+
+✈️ [Depth-first Search (DFS) Maze Generation in GameMaker: Studio](https://www.zackbanack.com/blog/dfs)
+
+✈️ [트리 순회(Tree traversal) - 위키백과](https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%A6%AC_%EC%88%9C%ED%9A%8C)
+
+✈️ [B+ Tree - 위키백과](https://en.wikipedia.org/wiki/B%2B_tree)
+
+✈️ [B+ Tree - CS Animated](http://www.csanimated.com/animation.php?t=B-tree)
+
+✈️ [Quick Sort - ](https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC)
 
 ## ★ Developer Information
 
