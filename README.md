@@ -15,6 +15,8 @@
 ###### ※ Insert Sorting Source Code
 
 ```C++
+#define SWAP(X, Y, Z) Z=X; X=Y; Y=Z;
+
 void insertSort(int * arr, int size) {
 
 	for (int ii = 0; ii < size; ii++) {
