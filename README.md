@@ -6,6 +6,29 @@
 
 #### # Insert Sorting (삽입정렬)
 
+* 삽입 정렬(揷入整列, insertion sort)은 자료 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교하여, 자신의 위치를 찾아 삽입함으로써 정렬을 완성하는 알고리즘이다.
+
+<p align="center">
+	<img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Insertion_sort_animation.gif" />
+</p>
+
+###### ※ Insert Sorting Source Code
+
+```C++
+void insertSort(int * arr, int size) {
+
+	for (int ii = 0; ii < size; ii++) {
+		for (int jj = ii; jj > 0; jj--) {
+
+			int temp = 0;
+			if (arr[jj] < arr[jj - 1]) {
+				SWAP(arr[jj - 1], arr[jj], temp);
+			}
+		}
+	}
+}
+```
+
 #### # Quick Sorting (퀵정렬)
 
 * 퀵 정렬(Quicksort)은 찰스 앤터니 리처드 호어가 개발한 정렬 알고리즘이다. 다른 원소와의 비교만으로 정렬을 수행하는 비교 정렬에 속한다. 퀵 정렬은 n개의 데이터를 정렬할 때, **최악의 경우에는 O(n2)번의 비교를 수행**하고, **평균적으로 O(n log n)번의 비교를 수행**한다. **퀵 정렬의 내부 루프는 대부분의 컴퓨터 아키텍처에서 효율적으로 작동하도록 설계되어 있고(그 이유는 메모리 참조가 지역화되어 있기 때문에 CPU 캐시의 히트율이 높아지기 때문이다.)**, 대부분의 실질적인 데이터를 정렬할 때 제곱 시간이 걸릴 확률이 거의 없도록 알고리즘을 설계하는 것이 가능하다. 때문에 **일반적인 경우 퀵 정렬은 다른 O(n log n) 알고리즘에 비해 훨씬 빠르게 동작한다. 그리고 퀵 정렬은 정렬을 위해 O(log n)만큼의 memory를 필요로한다.** 또한 **퀵 정렬은 불안정 정렬에 속한다.**
