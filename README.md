@@ -182,6 +182,7 @@ decrement_address_one = (address + Length - 1) % Length
 * * *
 
 ##### ※ Recalsive DFS Source Code
+
 ```C++
 void recalsiveDFS(int index, int length) {
 	isVisit[index] = true;
@@ -196,6 +197,7 @@ void recalsiveDFS(int index, int length) {
 * * *
 
 ##### ※ Stack DFS Source Code
+
 ```C++
 void stackDFS(int index, int length) {
 	
@@ -224,6 +226,12 @@ void stackDFS(int index, int length) {
 * * *
 
 #### # BFS (Breadth First Search)
+
+* 너비 우선 탐색(Breadth-first search, BFS)은 맹목적 탐색방법의 하나로 시작 정점을 방문한 후 시작 정점에 인접한 모든 정점들을 우선 방문하는 방법이다. 더 이상 방문하지 않은 정점이 없을 때까지 방문하지 않은 모든 정점들에 대해서도 너비 우선 검색을 적용한다. OPEN List 는 큐를 사용해야만 레벨 순서대로 접근이 가능하다.
+
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Animated_BFS.gif" />
+</p>
 
 * * *
 
@@ -354,6 +362,8 @@ void leverOrder(Node * node) {
 ✈️ [Quick Sort - 위키백과](https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC)
 
 ✈️ [Insert Sort - 위키백과](https://ko.wikipedia.org/wiki/%EC%82%BD%EC%9E%85_%EC%A0%95%EB%A0%AC)
+
+✈️ [Breadth-first search, BFS - ](https://ko.wikipedia.org/wiki/%EB%84%88%EB%B9%84_%EC%9A%B0%EC%84%A0_%ED%83%90%EC%83%89)
 
 ## ★ Developer Information
 
