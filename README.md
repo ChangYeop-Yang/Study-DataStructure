@@ -363,7 +363,7 @@ void leverOrder(Node * node) {
 
 ✈️ [Insert Sort - 위키백과](https://ko.wikipedia.org/wiki/%EC%82%BD%EC%9E%85_%EC%A0%95%EB%A0%AC)
 
-✈️ [Breadth-first search, BFS - ](https://ko.wikipedia.org/wiki/%EB%84%88%EB%B9%84_%EC%9A%B0%EC%84%A0_%ED%83%90%EC%83%89)
+✈️ [Breadth-first search, BFS - 위키백과](https://ko.wikipedia.org/wiki/%EB%84%88%EB%B9%84_%EC%9A%B0%EC%84%A0_%ED%83%90%EC%83%89)
 
 ## ★ Developer Information
 
