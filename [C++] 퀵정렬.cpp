@@ -8,8 +8,8 @@ void QuickSort(int * mArr, int left, int right)
 
 	while (mLeft <= mRight) /* mLeft와 mRight가 교차하지 않을 때 경우까지 반복한다. */
 	{
-		while (mArr[mLeft] > pivot) { ++mLeft; } /* pivot 보다 작은 값을 찾는 경우 */
-		while (mArr[mRight] < pivot) { --mRight; } /* pivot 보다 큰 값을 찾는 경우 */
+		while (mArr[mLeft] < pivot) { ++mLeft; } /* pivot 보다 작은 값을 찾는 경우 */
+		while (mArr[mRight] > pivot) { --mRight; } /* pivot 보다 큰 값을 찾는 경우 */
 
 		if (mLeft <= mRight) /* mLeft 보다 mRight가 값이 크거나 같은 경우 */
 		{
