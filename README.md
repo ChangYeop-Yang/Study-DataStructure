@@ -231,6 +231,32 @@ void stackDFS(int index, int length) {
   <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Animated_BFS.gif" />
 </p>
 
+```C++
+void BFS(const int start, const int vertax) {
+
+	vector<bool> check = vector<bool>(vertax, true);
+	check[start] = false;
+
+	queue<int> que;
+	que.push(start);
+
+	while (!que.empty()) {
+
+		const int index = que.front();
+		que.pop();
+
+		cout << index << endl;
+
+		for (int ii = 0; ii < vertax; ii++) {
+			if (arr[index][ii] == 1 && check[ii]) { 
+				check[ii] = false;
+				que.push(ii);
+			}
+		}
+	}
+}
+```
+
 #### # Dijkstra Algorithm (다익스트라 알고리즘)
 
 * 컴퓨터 과학에서, 데이크스트라 알고리즘(영어: Dijkstra algorithm) 또는 다익스트라 알고리즘은 도로 교통망 같은 곳에서 나타날 수 있는 그래프에서 꼭짓점 간의 최단 경로를 찾는 알고리즘이다. 
