@@ -231,6 +231,8 @@ void stackDFS(int index, int length) {
   <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Animated_BFS.gif" />
 </p>
 
+###### ※ BFS (Breadth First Search) Algorithm Source Code
+
 ```C++
 void BFS(const int start, const int vertax) {
 
@@ -334,8 +336,8 @@ for (size_t ii = 0; ii < edge; ii++) {
 
 #### # Tree traversal (트리순회)
 
-|:zap: Preorder|:zap: Inorder|:zap: Postorder|
-|:------------:|:-----------:|:-------------:|
+|:zap: Preorder Order|:zap: Inorder Order|:zap: Postorder Order|
+|:------------------:|:-----------------:|:-------------------:|
 |![](http://ceadserv1.nku.edu/longa/classes/mat385_resources/docs/traversal_files/PreOrderTrav.gif)|![](http://ceadserv1.nku.edu/longa/classes/mat385_resources/docs/traversal_files/InorderTrav.gif)|![](http://ceadserv1.nku.edu/longa/classes/mat385_resources/docs/traversal_files/PostorderTrav.gif)|
 
 * 트리 구조에서 각각의 노드를 정확히 한 번만, 체계적인 방법으로 방문하는 과정을 말한다. 이는 노드를 방문하는 순서에 따라 분류된다.
