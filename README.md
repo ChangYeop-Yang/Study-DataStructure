@@ -1,4 +1,4 @@
-# ■ Data Structure
+# ■ Data Structure (자료구조)
 
 * 자료구조(資料構造, 영어: data structure)는 전산학에서 자료를 효율적으로 이용할 수 있도록 컴퓨터에 저장하는 방법이다. 신중히 선택한 자료구조는 보다 효율적인 알고리즘을 사용할 수 있게 한다. 이러한 자료구조의 선택문제는 대개 추상 자료형의 선택으로부터 시작하는 경우가 많다. 효과적으로 설계된 자료구조는 실행시간 혹은 메모리 용량과 같은 자원을 최소한으로 사용하면서 연산을 수행하도록 해준다.
 
@@ -223,8 +223,6 @@ void stackDFS(int index, int length) {
 }
 ```
 
-* * *
-
 #### # BFS (Breadth First Search)
 
 * 너비 우선 탐색(Breadth-first search, BFS)은 맹목적 탐색방법의 하나로 시작 정점을 방문한 후 시작 정점에 인접한 모든 정점들을 우선 방문하는 방법이다. 더 이상 방문하지 않은 정점이 없을 때까지 방문하지 않은 모든 정점들에 대해서도 너비 우선 검색을 적용한다. OPEN List 는 큐를 사용해야만 레벨 순서대로 접근이 가능하다.
@@ -233,7 +231,80 @@ void stackDFS(int index, int length) {
   <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Animated_BFS.gif" />
 </p>
 
-* * *
+#### # Dijkstra Algorithm (다익스트라 알고리즘)
+
+* 컴퓨터 과학에서, 데이크스트라 알고리즘(영어: Dijkstra algorithm) 또는 다익스트라 알고리즘은 도로 교통망 같은 곳에서 나타날 수 있는 그래프에서 꼭짓점 간의 최단 경로를 찾는 알고리즘이다. 
+
+<p align="center">
+	<img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif" />
+</p>
+
+* 그래프에서 주어진 소스 꼭짓점에 대해서, 데이크스트라 알고리즘은 그 노드와 다른 모든 꼭짓점 간의 가장 짧은 경로를 찾는다.[4]:196–206 이 알고리즘은 어떤 한 꼭짓점에서 다른 한 도착점까지 가는 경로를 찾을 때, 그 도착점까지 가는 가장 짧은 경로가 결정되면 멈추는 식으로 사용할 수 있다. 예컨대 어떤 그래프에서, 꼭짓점들이 각각 도시를 나타내고, 변들이 도시 사이를 연결하는 도로의 길이를 나타낸다면, 데이크스트라 알고리즘을 통하여 두 도시 사이의 최단 경로를 찾을 수 있다. 따라서 최단 경로 알고리즘은 네트워크 라우팅 프로토콜에서 널리 이용되며, 특히 IS-IS (Intermediate System to Intermediate System)와 OSPF(Open Shortest Path First)에서 주로 사용된다. 또한 데이크스트라 알고리즘은 존슨 알고리즘 같은 알고리즘의 서브루틴으로 채택되었다.
+
+###### ※ Dijkstra Algorithm Method
+
+* 모든 꼭짓점을 미방문 상태로 표시한다. 미방문 집합이라는 모든 미방문 꼭짓점의 집합을 만든다.
+
+* 모든 꼭짓점에 시험적 거리 값을 부여한다: 초기점을 0으로, 다른 모든 꼭짓점을 무한대로 설정한다. 초기점을 현재 위치로 설정한다.
+
+* 현재 꼭짓점에서 미방문 인접 꼭짓점을 찾아 그 시험적 거리를 현재 꼭짓점에서 계산한다. 새로 계산한 시험적 거리를 현재 부여된 값과 비교해서 더 작은 값을 넣는다. 예를 들어, 현재 꼭짓점 A의 거리가 6이라고 표시되었고, 인접 꼭짓점 B으로 연결되는 변의 길이가 2라고 한다면, A를 통한 B의 거리는 6 + 2 = 8이 될 것이다. B가 이전에 거리가 8보다 크다고 표시되었었다면 8로 바꾸고, 그렇지 않다면 그대로 놔둔다.
+
+* 만약 현재 노드에 인접한 모든 미방문 꼭짓점을 계산했다면, 현재 꼭짓점을 방문한 것으로 표시하고 미방문 집합에서 제거한다. 방문한 꼭짓점은 이후에는 다시 검사하지 않는다.
+
+* 도착점이 방문한 상태로 표시되거나 (특정 두 꼭짓점 사이의 경로를 계획하고 있을 때) 미방문 집합에 있는 꼭짓점들의 시험적 거리 중 최솟값이 무한대이면(완전 순회를 계획중일 때. 이 현상은 초기점과 나머지 미방문 집합 간에 연결이 없을 때 일어난다), 멈춘다. 알고리즘을 종료한다.
+
+* 아니면 시험적 거리가 가장 작은 다음 미방문 꼭짓점을 새로운 "현재 위치"로 선택하고 3단계로 되돌아간다.
+
+###### ※ Dijkstra Algorithm Source Code
+
+```C++
+#define PAIR pair<int, int>
+#define MAX_V 1001
+
+/* 그래프 인접 리스트 (연결 된 정점 번호, 간선 가중치)의 쌍을 담는다. */
+vector<PAIR> adj[MAX_V];
+
+const vector<int> Dijkstra(const int vertax, const int start) {
+
+	vector<int> dist = vector<int>(vertax, INT_MAX);
+	dist[start] = 0;
+
+	priority_queue<PAIR> pq;
+	pq.push(make_pair(dist[start], start)); /* (Vertax Cost, Vertax Index) */
+
+	while (!pq.empty()) {
+		int cost = -pq.top().first; // Vertax Cost
+		int here = pq.top().second; // Vertax Index
+		pq.pop();
+
+		/* 만약 지금 꺼낸 것보다 더 짧은 경로를 알고 있는 경우 지금 꺼낸 것을 버린다. */
+		if (dist[here] < cost) { continue; }
+
+		/* 갈 수 있는 인접 한 정점들을 모두 검사한다. */
+		for (int index = 0; index < adj[here].size(); index++) {
+			int there = adj[here][index].first; // 현재 정점에서 연결 된 노드
+			int nextDist = cost + adj[here][index].second;
+
+			/* 다음 경로의 값보다 현재 경로가 작은 경우 Distance를 갱신하고 우선순위 큐에 저장한다. */
+			if (nextDist < dist[there]) {
+				dist[there] = nextDist;
+				pq.push(make_pair(-nextDist, there)); /* 음수를 붙이는 이유는 거리가 작은 정점으로 부터 꺼내질 수 있도로 하기 위함이다. */
+			}
+		}
+	}
+
+	return dist;
+}
+
+/* INPUT
+for (size_t ii = 0; ii < edge; ii++) {
+		size_t start = 0, end = 0, weigth = 0;
+		scanf("%d %d %d", &start, &end, &weigth);
+		
+		adj[start].push_back(make_pair(end, weigth));
+	} 
+*/
+```
 
 #### # Tree traversal (트리순회)
 
