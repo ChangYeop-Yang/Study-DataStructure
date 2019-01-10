@@ -334,9 +334,9 @@ for (size_t ii = 0; ii < edge; ii++) {
 
 #### # Tree traversal (트리순회)
 
-<p align="center">
- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Sorted_binary_tree.svg/250px-Sorted_binary_tree.svg.png" />
-</p>
+|:zap: Preorder|:zap: Inorder|:zap: Postorder|
+|:------------:|:-----------:|:-------------:|
+|![](http://ceadserv1.nku.edu/longa/classes/mat385_resources/docs/traversal_files/PreOrderTrav.gif)|![](http://ceadserv1.nku.edu/longa/classes/mat385_resources/docs/traversal_files/InorderTrav.gif)|![](http://ceadserv1.nku.edu/longa/classes/mat385_resources/docs/traversal_files/PostorderTrav.gif)|
 
 * 트리 구조에서 각각의 노드를 정확히 한 번만, 체계적인 방법으로 방문하는 과정을 말한다. 이는 노드를 방문하는 순서에 따라 분류된다.
 
@@ -461,6 +461,8 @@ void leverOrder(Node * node) {
 ✈️ [Insert Sort - 위키백과](https://ko.wikipedia.org/wiki/%EC%82%BD%EC%9E%85_%EC%A0%95%EB%A0%AC)
 
 ✈️ [Breadth-first search, BFS - 위키백과](https://ko.wikipedia.org/wiki/%EB%84%88%EB%B9%84_%EC%9A%B0%EC%84%A0_%ED%83%90%EC%83%89)
+
+✈️ [Traversing a Binary Tree](http://ceadserv1.nku.edu/longa/classes/mat385_resources/docs/traversal.htm)
 
 ## ★ Developer Information
 
