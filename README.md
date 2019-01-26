@@ -438,7 +438,7 @@ int primAlgorithm(vector<PAIR> & selected, int vertax) {
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/KruskalDemo.gif/220px-KruskalDemo.gif" />
 </p>
 
-* Kruskal's algorithm is a minimum-spanning-tree algorithm which finds an edge of the least possible weight that connects any two trees in the forest.[1] It is a greedy algorithm in graph theory as it finds a minimum spanning tree for a connected weighted graph adding increasing cost arcs at each step.
+* Kruskal's algorithm is a minimum-spanning-tree algorithm which finds an edge of the least possible weight that connects any two trees in the forest.[1] It is a greedy algorithm in graph theory as it finds a minimum spanning tree for a connected weighted graph adding increasing cost arcs at each step. This means it finds a subset of the edges that forms a tree that includes every vertex, where the total weight of all the edges in the tree is minimized. If the graph is not connected, then it finds a minimum spanning forest (a minimum spanning tree for each connected component).
 
 #### # Tree traversal (트리순회)
 
