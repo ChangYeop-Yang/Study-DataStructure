@@ -332,7 +332,7 @@ for (size_t ii = 0; ii < edge; ii++) {
 */
 ```
 
-#### ★ 프림 알고리즘 (Prim's algorithm)
+#### ＃ 프림 알고리즘 (Prim's algorithm)
 
 * 프림 알고리즘(Prim's algorithm)은 가중치가 있는 연결된 무향 그래프의 모든 꼭짓점을 포함하면서 각 변의 비용의 합이 최소가 되는 부분 그래프인 트리, 즉 최소 비용 생성나무를 찾는 알고리즘이다.
 
@@ -548,7 +548,7 @@ void leverOrder(Node * node) {
 
 ✈️ [Depth-first Search (DFS) Maze Generation in GameMaker: Studio](https://www.zackbanack.com/blog/dfs)
 
-✈️ [트리 순회(Tree traversal) - 위키백과](https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%A6%AC_%EC%88%9C%ED%9A%8C)
+✈️ [트리 순회 (Tree traversal) - 위키백과](https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%A6%AC_%EC%88%9C%ED%9A%8C)
 
 ✈️ [B+ Tree - 위키백과](https://en.wikipedia.org/wiki/B%2B_tree)
 
@@ -561,6 +561,8 @@ void leverOrder(Node * node) {
 ✈️ [Breadth-first search, BFS - 위키백과](https://ko.wikipedia.org/wiki/%EB%84%88%EB%B9%84_%EC%9A%B0%EC%84%A0_%ED%83%90%EC%83%89)
 
 ✈️ [Traversing a Binary Tree](http://ceadserv1.nku.edu/longa/classes/mat385_resources/docs/traversal.htm)
+
+✈️ [프림 알고리즘 (Prim Algorithm) - 위키백과](https://ko.wikipedia.org/wiki/%ED%94%84%EB%A6%BC_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 ## ★ Developer Information
 
