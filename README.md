@@ -334,7 +334,7 @@ for (size_t ii = 0; ii < edge; ii++) {
 
 #### ＃ 프림 알고리즘 (Prim's algorithm)
 
-* 프림 알고리즘(Prim's algorithm)은 가중치가 있는 연결된 무향 그래프의 모든 꼭짓점을 포함하면서 각 변의 비용의 합이 최소가 되는 부분 그래프인 트리, 즉 최소 비용 생성나무를 찾는 알고리즘이다.
+* 프림 알고리즘(Prim's algorithm)은 **가중치가 있는 연결된 무향 그래프의 모든 꼭짓점을 포함하면서 각 변의 비용의 합이 최소가 되는 부분 그래프인 트리, 즉 최소 비용 생성나무를 찾는 알고리즘**이다.
 
 <p align="center">
 	<img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/PrimAlgDemo.gif" />
@@ -429,6 +429,16 @@ int primAlgorithm(vector<PAIR> & selected, int vertax) {
 	return ret;
 }
 ```
+
+#### ＃ 크루스칼 알고리즘 (Kruskal’s Algorithm)
+
+* 크러스컬 알고리즘(영어: Kruskal’s algorithm)은 최소 비용 생성나무를 찾는 알고리즘이다.
+
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/KruskalDemo.gif/220px-KruskalDemo.gif" />
+</p>
+
+* Kruskal's algorithm is a minimum-spanning-tree algorithm which finds an edge of the least possible weight that connects any two trees in the forest.[1] It is a greedy algorithm in graph theory as it finds a minimum spanning tree for a connected weighted graph adding increasing cost arcs at each step.
 
 #### # Tree traversal (트리순회)
 
@@ -563,6 +573,8 @@ void leverOrder(Node * node) {
 ✈️ [Traversing a Binary Tree](http://ceadserv1.nku.edu/longa/classes/mat385_resources/docs/traversal.htm)
 
 ✈️ [프림 알고리즘 (Prim Algorithm) - 위키백과](https://ko.wikipedia.org/wiki/%ED%94%84%EB%A6%BC_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+
+✈️ [크루스칼 알고리즘 (Kruskal’s Algorithm) - 위키백과](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
 
 ## ★ Developer Information
 
