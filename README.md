@@ -332,6 +332,104 @@ for (size_t ii = 0; ii < edge; ii++) {
 */
 ```
 
+#### ★ 프림 알고리즘 (Prim's algorithm)
+
+* 프림 알고리즘(Prim's algorithm)은 가중치가 있는 연결된 무향 그래프의 모든 꼭짓점을 포함하면서 각 변의 비용의 합이 최소가 되는 부분 그래프인 트리, 즉 최소 비용 생성나무를 찾는 알고리즘이다.
+
+<p align="center">
+	<img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/PrimAlgDemo.gif" />
+</p>
+
+1. 그래프에서 하나의 꼭짓점을 선택하여 트리를 만든다.
+
+2. 그래프의 모든 변이 들어 있는 집합을 만든다.
+
+3. 모든 꼭짓점이 트리에 포함되어 있지 않은 동안 트리와 연결된 변 가운데 트리 속의 두 꼭짓점을 연결하지 않는 가장 가중치가 작은 변을 트리에 추가한다.
+
+###### ※ Prim's algorithm Source Code (우선순위 큐를 사용 한 방법)
+
+```C++
+#define MAX_V 10001
+#define PAIR pair<int, int>
+
+vector<PAIR> adj[MAX_V];
+
+int primAlgorithm(int vertax, int src) {
+
+	// 가중치의 합을 저장하는 변수
+	int ret = 0;
+	
+	// 해당 정점이 트리에 포함 된 적이 있는지 확인하는 Vector
+	vector<bool> check = vector<bool>(vertax + 1, false);
+	check[src] = true; // 시작 할 정점을 시작점으로 트리에 가장 먼저 추가한다.
+
+	// 시작 할 정점에 연결 된 모든 노드들을 추가한다. <Weigth, Node>
+	priority_queue<PAIR> pq;
+	for (const PAIR edge : adj[src]) { pq.push(make_pair(-edge.second, edge.first)); } 
+
+	while (!pq.empty()) {
+		
+		PAIR edge = pq.top(); pq.pop();
+		
+		// 해당 정점이 추가 된 노드인 경우는 건너뛴다.
+		if (check[edge.second]) { continue; }
+
+		ret += -edge.first; // 해당 정점까지의 가중치 합
+		check[edge.second] = true; // 해당 정점 추가 표시
+
+		// 정점에 인접 한 간선 검사한다.
+		int node = edge.second;
+		for (const PAIR edge : adj[node]) { pq.push(make_pair(-edge.second, edge.first)); }
+	}
+
+	return ret;
+}
+```
+
+###### ※ Prim's algorithm Source Code (우선순위 큐를 사용하지 않는 방법)
+
+```C++
+#define MAX_V 101
+#define PAIR pair<int, int>
+
+vector<PAIR> adj[MAX_V];
+
+int primAlgorithm(vector<PAIR> & selected, int vertax) {
+
+	selected.clear();
+	
+	// 가중치의 합을 저장하는 변수
+	int ret = 0;
+
+	// 해당 정점이 트리에 포함 된 적이 있는지 확인하는 Vector
+	vector<bool> added(vertax, false);
+
+	// 트리에 인접한 간선 중 해당 정점에 닿는 최소 간선의 정보를 저장하는 Vector
+	vector<int> minWeight(vertax, INT_MAX), parent(vertax, EOF);
+	minWeight[0] = parent[0] = 0; // 0번 정점을 시작점으로 트리에 가장 먼저 추가한다.
+
+	for (int iter = 0; iter < vertax; iter++) {
+		// 다음에 트리에 추가할 정점 U를 찾는다.
+		int u = EOF;
+		for (int ii = 0; ii < vertax; ii++) {
+			if (!added[ii] && (u == -1 || minWeight[u] > minWeight[ii])) { u = ii; }
+		}
+
+		// 트리에 추가한다.
+		if (parent[u] != u) { selected.push_back(make_pair(parent[u], u)); }
+		ret += minWeight[u];
+		added[u] = true;
+
+		// U에 인접 한 간선 (U, V)들을 검사한다.
+		for (int ii = 0; ii < adj[u].size(); ii++) {
+			int v = adj[u][ii].first, weight = adj[u][ii].second;
+			if (!added[v] && minWeight[v] > weight) { minWeight[v] = weight; parent[v] = u; }
+		}
+	}
+	return ret;
+}
+```
+
 #### # Tree traversal (트리순회)
 
 |:zap: Preorder Order|:zap: Inorder Order|:zap: Postorder Order|
@@ -463,7 +561,6 @@ void leverOrder(Node * node) {
 ✈️ [Breadth-first search, BFS - 위키백과](https://ko.wikipedia.org/wiki/%EB%84%88%EB%B9%84_%EC%9A%B0%EC%84%A0_%ED%83%90%EC%83%89)
 
 ✈️ [Traversing a Binary Tree](http://ceadserv1.nku.edu/longa/classes/mat385_resources/docs/traversal.htm)
-
 
 ## ★ Developer Information
 
