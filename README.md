@@ -79,6 +79,8 @@ void QuickSort(int * mArr, int left, int right)
 
 #### ＃ 병합 정렬 (Merge sort)
 
+* In computer science, merge sort (also commonly spelled mergesort) is an efficient, general-purpose, comparison-based sorting algorithm. Most implementations produce a stable sort, which means that the order of equal elements is the same in the input and output. Merge sort is a divide and conquer algorithm that was invented by John von Neumann in 1945. A detailed description and analysis of bottom-up mergesort appeared in a report by Goldstine and von Neumann as early as 1948.
+
 <p align="center">
 	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Merge-sort-example-300px.gif/220px-Merge-sort-example-300px.gif" />
 </p>
@@ -627,6 +629,8 @@ void leverOrder(Node * node) {
 ✈️ [프림 알고리즘 (Prim Algorithm) - 위키백과](https://ko.wikipedia.org/wiki/%ED%94%84%EB%A6%BC_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 ✈️ [크루스칼 알고리즘 (Kruskal’s Algorithm) - 위키백과](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
+
+✈️ [병합 정렬 (Merge Sort) - 위키백과](https://en.wikipedia.org/wiki/Merge_sort)
 
 ## ★ Developer Information
 
