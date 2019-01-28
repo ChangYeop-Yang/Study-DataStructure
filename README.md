@@ -4,6 +4,10 @@
 
 ## ★ 정렬 (Sorting)
 
+<p align="center">
+	<img src="https://user-images.githubusercontent.com/20036523/51833347-7f295000-233a-11e9-92a2-f256280548cd.png" />
+</p>
+
 #### ＃ Insert Sort (삽입정렬)
 
 * 삽입 정렬(揷入整列, insertion sort)은 자료 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교하여, 자신의 위치를 찾아 삽입함으로써 정렬을 완성하는 알고리즘이다.
