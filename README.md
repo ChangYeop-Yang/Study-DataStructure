@@ -77,6 +77,58 @@ void QuickSort(int * mArr, int left, int right)
 }
 ```
 
+#### ＃ 병합 정렬 (Merge sort)
+
+<p align="center">
+	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Merge-sort-example-300px.gif/220px-Merge-sort-example-300px.gif" />
+</p>
+
+* 합병 정렬 또는 병합 정렬(merge sort)은 O(n log n) 비교 기반 정렬 알고리즘이다. 일반적인 방법으로 구현했을 때 이 정렬은 안정 정렬에 속하며, 분할 정복 알고리즘의 하나이다. 존 폰 노이만이 1945년에 개발했다.
+
+###### ※ Merge Sort Source Code
+
+```C++
+void mergeTwoArea(vector<int> & arr, int left, int mid, int right) {
+	
+	// fIdx와 rIdx에는 각각 병합할 두 영역의 첫 번째 위치정보가 담긴다. (fIdx = Left Array, rIdx = Right Array)
+	int fIdx = left, rIdx = mid + 1, sIdx = left;
+
+	// 병합 한 결과를 담을 Vector
+	vector<int> sortArr = vector<int>(right + 1);
+
+	// 병합 할 두 영역의 데이터들을 비교하여, 정렬순서대로 Vector에 하나씩 옮겨 담는다.
+	while (fIdx <= mid && rIdx <= right) {
+		if (arr[fIdx] <= arr[rIdx]) { sortArr[sIdx] = arr[fIdx++]; }
+		else { sortArr[sIdx] = arr[rIdx++]; }
+		sIdx++, answer++;
+	}
+
+	// 배열의 앞 부분이 모두 Vector에 옮겨졌다면, 배열의 뒷 부분에 남은 데이터들을 Vector에 그대로 옮긴다.
+	if (fIdx > mid) {
+		for (int ii = rIdx; ii <= right; sIdx++, ii++) { sortArr[sIdx] = arr[ii]; }
+	// 배열의 뒷 부분이 모두 Vector에 옮겨졌다면, 배열의 앞 부분에 남은 데이터들을 Vector에 그래도 옮긴다.
+	} else {
+		for (int ii = fIdx; ii <= mid; sIdx++, ii++) { sortArr[sIdx] = arr[ii]; }
+	}
+
+	for (int ii = left; ii <= right; ii++) { arr[ii] = sortArr[ii]; }
+}
+
+void mergeSort(vector<int> & arr, int left, int right) {
+	
+	// 배열의 중간 지점 인덱스를 구한다.
+	const int mid = (left + right) / 2;
+	if (left < right) {
+		mergeSort(arr, left, mid); // [Left Index ~ Mid Index] 분할한다.
+		mergeSort(arr, mid + 1, right); // [Mid Index ~ Right Index] 분할한다.
+
+		// 분할 된 두 배열을 하나로 병합한다.
+		mergeTwoArea(arr, left, mid, right);
+	}
+
+}
+```
+
 ## ★ 선형 구조
 
 #### ＃ Stack (스택 구조)
