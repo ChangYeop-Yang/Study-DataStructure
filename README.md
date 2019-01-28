@@ -91,33 +91,33 @@ void QuickSort(int * mArr, int left, int right)
 
 ```C++
 void mergeTwoArea(vector<int> & arr, int left, int mid, int right) {
-	
+
 	// fIdx와 rIdx에는 각각 병합할 두 영역의 첫 번째 위치정보가 담긴다. (fIdx = Left Array, rIdx = Right Array)
-	int fIdx = left, rIdx = mid + 1, sIdx = left;
+	int fIdx = left, rIdx = mid + 1;
 
 	// 병합 한 결과를 담을 Vector
-	vector<int> sortArr = vector<int>(right + 1);
+	vector<int> sortArr;
 
 	// 병합 할 두 영역의 데이터들을 비교하여, 정렬순서대로 Vector에 하나씩 옮겨 담는다.
 	while (fIdx <= mid && rIdx <= right) {
-		if (arr[fIdx] <= arr[rIdx]) { sortArr[sIdx] = arr[fIdx++]; }
-		else { sortArr[sIdx] = arr[rIdx++]; }
-		sIdx++, answer++;
+		if (arr[fIdx] <= arr[rIdx]) { sortArr.push_back(arr[fIdx++]); }
+		else { sortArr.push_back(arr[rIdx++]); }
 	}
 
-	// 배열의 앞 부분이 모두 Vector에 옮겨졌다면, 배열의 뒷 부분에 남은 데이터들을 Vector에 그대로 옮긴다.
 	if (fIdx > mid) {
-		for (int ii = rIdx; ii <= right; sIdx++, ii++) { sortArr[sIdx] = arr[ii]; }
-	// 배열의 뒷 부분이 모두 Vector에 옮겨졌다면, 배열의 앞 부분에 남은 데이터들을 Vector에 그래도 옮긴다.
-	} else {
-		for (int ii = fIdx; ii <= mid; sIdx++, ii++) { sortArr[sIdx] = arr[ii]; }
+		// 배열의 앞 부분이 모두 Vector에 옮겨졌다면, 배열의 뒷 부분에 남은 데이터들을 Vector에 그대로 옮긴다.
+		for (int ii = rIdx; ii <= right; ii++) { sortArr.push_back(arr[ii]); }
+	}
+	else {
+		// 배열의 뒷 부분이 모두 Vector에 옮겨졌다면, 배열의 앞 부분에 남은 데이터들을 Vector에 그래도 옮긴다.
+		for (int ii = fIdx; ii <= mid; ii++) { sortArr.push_back(arr[ii]); }
 	}
 
-	for (int ii = left; ii <= right; ii++) { arr[ii] = sortArr[ii]; }
+	for (int ii = left, jj = 0; ii <= right; ii++, jj++) { arr[ii] = sortArr[jj]; }
 }
 
 void mergeSort(vector<int> & arr, int left, int right) {
-	
+
 	// 배열의 중간 지점 인덱스를 구한다.
 	const int mid = (left + right) / 2;
 	if (left < right) {
