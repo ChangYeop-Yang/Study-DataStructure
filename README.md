@@ -4,7 +4,7 @@
 
 ## ★ 정렬 (Sorting)
 
-#### ＃ Insert Sorting (삽입정렬)
+#### ＃ Insert Sort (삽입정렬)
 
 * 삽입 정렬(揷入整列, insertion sort)은 자료 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교하여, 자신의 위치를 찾아 삽입함으로써 정렬을 완성하는 알고리즘이다.
 
@@ -12,7 +12,7 @@
 	<img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Insertion_sort_animation.gif" />
 </p>
 
-###### ※ Insert Sorting Source Code
+###### ※ Insert Sort Source Code
 
 ```C++
 #define SWAP(X, Y, Z) Z=X; X=Y; Y=Z;
@@ -31,7 +31,7 @@ void insertSort(int * arr, int size) {
 }
 ```
 
-#### ＃ Quick Sorting (퀵정렬)
+#### ＃ Quick Sort (퀵정렬)
 
 * 퀵 정렬(Quicksort)은 찰스 앤터니 리처드 호어가 개발한 정렬 알고리즘이다. 다른 원소와의 비교만으로 정렬을 수행하는 비교 정렬에 속한다. 퀵 정렬은 n개의 데이터를 정렬할 때, **최악의 경우에는 O(n2)번의 비교를 수행**하고, **평균적으로 O(n log n)번의 비교를 수행**한다. **퀵 정렬의 내부 루프는 대부분의 컴퓨터 아키텍처에서 효율적으로 작동하도록 설계되어 있고(그 이유는 메모리 참조가 지역화되어 있기 때문에 CPU 캐시의 히트율이 높아지기 때문이다.)**, 대부분의 실질적인 데이터를 정렬할 때 제곱 시간이 걸릴 확률이 거의 없도록 알고리즘을 설계하는 것이 가능하다. 때문에 **일반적인 경우 퀵 정렬은 다른 O(n log n) 알고리즘에 비해 훨씬 빠르게 동작한다. 그리고 퀵 정렬은 정렬을 위해 O(log n)만큼의 memory를 필요로한다.** 또한 **퀵 정렬은 불안정 정렬에 속한다.**
 
@@ -39,7 +39,7 @@ void insertSort(int * arr, int size) {
 	<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif" />
 </p>
 
-###### ※ Quick Sorting Process
+###### ※ Quick Sort Process
 
 * 리스트 가운데서 하나의 원소를 고른다. 이렇게 고른 원소를 피벗이라고 한다.
 
@@ -47,7 +47,7 @@ void insertSort(int * arr, int size) {
 
 * 분할된 두 개의 작은 리스트에 대해 재귀(Recursion)적으로 이 과정을 반복한다. 재귀는 리스트의 크기가 0이나 1이 될 때까지 반복된다.
 
-###### ※ Quick Sorting Source Code
+###### ※ Quick Sort Source Code
 
 ```C++
 #define SWAP(X, Y, Z) Z=X; X=Y; Y=Z;
@@ -86,6 +86,14 @@ void QuickSort(int * mArr, int left, int right)
 </p>
 
 * 합병 정렬 또는 병합 정렬(merge sort)은 O(n log n) 비교 기반 정렬 알고리즘이다. 일반적인 방법으로 구현했을 때 이 정렬은 안정 정렬에 속하며, 분할 정복 알고리즘의 하나이다. 존 폰 노이만이 1945년에 개발했다.
+
+###### ※ Merge Sort Process
+
+* 리스트의 길이가 0 또는 1이면 이미 정렬된 것으로 본다. 그렇지 않은 경우에는 정렬되지 않은 리스트를 절반으로 잘라 비슷한 크기의 두 부분 리스트로 나눈다.
+
+* 각 부분 리스트를 재귀적으로 합병 정렬을 이용해 정렬한다.
+
+* 두 부분 리스트를 다시 하나의 정렬된 리스트로 합병한다.
 
 ###### ※ Merge Sort Source Code
 
