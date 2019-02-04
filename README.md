@@ -506,6 +506,38 @@ int primAlgorithm(vector<PAIR> & selected, int vertax) {
 
 * Kruskal's algorithm is a minimum-spanning-tree algorithm which finds an edge of the least possible weight that connects any two trees in the forest.[1] It is a greedy algorithm in graph theory as it finds a minimum spanning tree for a connected weighted graph adding increasing cost arcs at each step. This means it finds a subset of the edges that forms a tree that includes every vertex, where the total weight of all the edges in the tree is minimized. If the graph is not connected, then it finds a minimum spanning forest (a minimum spanning tree for each connected component).
 
+#### ＃ 플로이드-워셜 알고리즘 (Floyd-Warshall Algorithm)
+
+* 컴퓨터 과학에서, 플로이드-워셜 알고리즘(Floyd-Warshall Algorithm)은 변의 가중치가 음이거나 양인 (음수 사이클은 없는) 가중 그래프에서 최단 경로들을 찾는 알고리즘이다. 알고리즘을 한 번 수행하면 모든 꼭짓점 쌍 간의 최단 경로의 길이(가중치의 합)을 찾는다.
+
+<p align="cetner">
+	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Floyd-Warshall_example.svg/2000px-Floyd-Warshall_example.svg.png" />
+</p>
+
+```C++
+#define VECTOR vector<int>
+
+// 그래프의 인접 행렬 (adj[u][v] = u에서 v로가는 간선의 가중치 값이며 간선이 없을 경우 무한 값을 넣는다.)
+vector<VECTOR> adj;
+
+// Graph에서의 모든 정점 사이의 최단 거리를 구하는 알고리즘 (시간복잡도 V^3, 공간복잡도 V^2)
+void floyd(const int v) {
+
+	for (int kk = 0; kk < v; kk++) { // kk = 경유 노드
+		for (int ii = 0; ii < v; ii++) { // ii = 출발 노드
+			for (int jj = 0; jj < v; jj++) { // jj 도착 노드
+				// adj[ii][kk] (출발점에서 경유점)까지 갈 수 없거나 adj[kk][jj] (경유점에서 도착점)까지 갈 수 없는 경우는 버린다.
+				if (adj[ii][kk] == INT_MAX || adj[kk][jj] == INT_MAX) { continue; }
+
+				// adj[ii][jj] (출발점에서 도착점)까지의 거리 중 adj[ii][kk] (출발점에서 경유점) + adj[kk][jj] (경유점에서 도착점)까지의 거리의 값이 더 작은 경우 [ii][jj] 값을 갱신한다.
+				adj[ii][jj] = min(adj[ii][jj], adj[ii][kk] + adj[kk][jj]);
+			}
+		}
+	} 
+
+}
+```
+
 #### # Tree traversal (트리순회)
 
 |:zap: Preorder Order|:zap: Inorder Order|:zap: Postorder Order|
