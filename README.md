@@ -508,11 +508,11 @@ int primAlgorithm(vector<PAIR> & selected, int vertax) {
 
 #### ＃ 플로이드-워셜 알고리즘 (Floyd-Warshall Algorithm)
 
-* 컴퓨터 과학에서, 플로이드-워셜 알고리즘(Floyd-Warshall Algorithm)은 변의 가중치가 음이거나 양인 (음수 사이클은 없는) 가중 그래프에서 최단 경로들을 찾는 알고리즘이다. 알고리즘을 한 번 수행하면 모든 꼭짓점 쌍 간의 최단 경로의 길이(가중치의 합)을 찾는다.
-
 <p align="cetner">
 	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Floyd-Warshall_example.svg/2000px-Floyd-Warshall_example.svg.png" />
 </p>
+
+* 컴퓨터 과학에서, 플로이드-워셜 알고리즘(Floyd-Warshall Algorithm)은 변의 가중치가 음이거나 양인 (음수 사이클은 없는) 가중 그래프에서 최단 경로들을 찾는 알고리즘이다. 알고리즘을 한 번 수행하면 모든 꼭짓점 쌍 간의 최단 경로의 길이(가중치의 합)을 찾는다.
 
 ```C++
 #define VECTOR vector<int>
