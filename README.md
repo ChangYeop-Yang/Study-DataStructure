@@ -523,6 +523,8 @@ vector<VECTOR> adj;
 // Graph에서의 모든 정점 사이의 최단 거리를 구하는 알고리즘 (시간복잡도 V^3, 공간복잡도 V^2)
 void floyd(const int v) {
 
+	for (int ii = 0; ii < v; ii++) { adj[ii][ii] = 0; }
+
 	for (int kk = 0; kk < v; kk++) { // kk = 경유 노드
 		for (int ii = 0; ii < v; ii++) { // ii = 출발 노드
 			for (int jj = 0; jj < v; jj++) { // jj 도착 노드
