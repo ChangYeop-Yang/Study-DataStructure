@@ -231,6 +231,8 @@ decrement_address_one = (address + Length - 1) % Length
 #### ※ 이진 트리(二進-, 영어: binary tree)
 각각의 노드가 최대 두 개의 자식 노드를 가지는 트리 자료 구조로, 자식 노드를 각각 왼쪽 자식 노드와 오른쪽 자식 노드라고 한다. 단순히 집합론의 개념을 사용하는 재귀적 정의에서 (비어있지 않은) 이진 트리는 하나의 튜플 (L, S, R)로, L과 R은 이진 트리 또는 공집합이고 S는 싱글턴 집합이다. 일부 구현자는 공집합인 이진 트리도 허용한다.
 
+* * *
+
 #### ※ 트라이 (Trie)
 
 <p align="center">
@@ -749,6 +751,10 @@ void leverOrder(Node * node) {
 ✈️ [Big-O Complexity Chart](http://bigocheatsheet.com/)
 
 ✈️ [플로이드-워셜 알고리즘(Floyd-Warshall Algorithm) - 위키백과](https://ko.wikipedia.org/wiki/%ED%94%8C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%9B%8C%EC%85%9C_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+
+✈️ [트라이 (Trie) - 위키백과](https://en.wikipedia.org/wiki/Trie)
+
+✈️ [트라이 (Trie) - GeeksforGeeks](https://www.geeksforgeeks.org/trie-insert-and-search/)
 
 ## ★ Developer Information
 
