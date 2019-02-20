@@ -712,7 +712,7 @@ void leverOrder(Node * node) {
 
 ## :mega: REFERENCE
 
-:laughing: [REFERENCE](https://github.com/ChangYeop-Yang/Study-DataStructure/issues/2)
+:laughing: [DATA STRUTURE REFERENCE](https://github.com/ChangYeop-Yang/Study-DataStructure/issues/2)
 
 ## :mega: Developer Information
 
