@@ -714,7 +714,7 @@ void leverOrder(Node * node) {
 
 :laughing: [REFERENCE](https://github.com/ChangYeop-Yang/Study-DataStructure/issues/2)
 
-## ★ Developer Information
+## :mega: Developer Information
 
 |:rocket: Github QR Code|:pencil: Naver-Blog QR Code|:eyeglasses: Linked-In QR Code|
 |:---------------------:|:-------------------------:|:----------------------------:|
