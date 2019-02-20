@@ -2,7 +2,7 @@
 
 * 자료구조(資料構造, 영어: data structure)는 전산학에서 자료를 효율적으로 이용할 수 있도록 컴퓨터에 저장하는 방법이다. 신중히 선택한 자료구조는 보다 효율적인 알고리즘을 사용할 수 있게 한다. 이러한 자료구조의 선택문제는 대개 추상 자료형의 선택으로부터 시작하는 경우가 많다. 효과적으로 설계된 자료구조는 실행시간 혹은 메모리 용량과 같은 자원을 최소한으로 사용하면서 연산을 수행하도록 해준다.
 
-## ★ 정렬 (Sorting)
+## :mega: 정렬 (Sorting)
 
 <p align="center">
 	<img src="https://user-images.githubusercontent.com/20036523/51833347-7f295000-233a-11e9-92a2-f256280548cd.png" />
@@ -143,7 +143,7 @@ void mergeSort(vector<int> & arr, int left, int right) {
 }
 ```
 
-## ★ 선형 구조
+## :mega: 선형 구조
 
 #### ＃ Stack (스택 구조)
 스택(stack)은 제한적으로 접근할 수 있는 나열 구조이다. 그 접근 방법은 언제나 목록의 끝에서만 일어난다. 끝먼저내기 목록(Pushdown list)이라고도 한다.
@@ -201,7 +201,7 @@ increment_address_one = (address + 1) % Length
 decrement_address_one = (address + Length - 1) % Length
 ```
 
-## ★ 비선형 구조
+## :mega: 비선형 구조
 
 ### ＃ Tree (트리 구조)
 트리 구조(tree 構造, 문화어: 나무구조)란 그래프의 일종으로, 여러 노드가 한 노드를 가리킬 수 없는 구조이다. 간단하게는 회로가 없고, 서로 다른 두 노드를 잇는 길이 하나뿐인 그래프를 트리라고 부른다.
@@ -301,7 +301,7 @@ void printWord(string & contents, const Trie * node) {
 }
 ```
 
-## ★ Graph
+## :mega: Graph
 
 #### # DFS (Depth First Serarch)
 이 우선 탐색(depth-first search: DFS)은 맹목적 탐색방법의 하나로 탐색트리의 최근에 첨가된 노드를 선택하고, 이 노드에 적용 가능한 동작자 중 하나를 적용하여 트리에 다음 수준(level)의 한 개의 자식노드를 첨가하며, 첨가된 자식 노드가 목표노드일 때까지 앞의 자식 노드의 첨가 과정을 반복해 가는 방식이다.
