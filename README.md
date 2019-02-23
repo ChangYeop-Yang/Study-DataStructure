@@ -348,10 +348,10 @@ typedef struct RMQ {
 		return this->rangeMin[node] = min(leftMin, rightMin); // Time Complxity - log(n)
 	}
 
-	private :
+	private:
 		// Node가 표현하는 범위 [NodeLeft, NodeRight]와 우리가 최소치를 찾기 원하는 구간 [left, right]의 교집합의 최소 원소를 반환한다.
 		const int query(int left, int right, int node, int nodeLeft, int nodeRight) {
-			
+
 			// 두 구간이 겹치지 않으면 아주 큰 값을 반환한다. (교집합이 공집합인 경우)
 			if (right < nodeLeft || nodeRight < left) { return INT_MAX; }
 
@@ -362,9 +362,22 @@ typedef struct RMQ {
 			const int mid = (nodeLeft + nodeRight) / 2;
 			return min(query(left, right, node * 2, nodeLeft, mid), query(left, right, node * 2 + 1, mid + 1, nodeRight));
 		} // 노드가 표현하는 구간이 찾고자하는 구간에 완전히 포함되거나 아예 겹쳐지지 않는 경우에는 탐색을 종료한다.
+	
+		const int update(int index, int newValue, int node, int nodeLeft, int nodeRight) {
+		
+			// Index가 노드가 표현하는 구간과 상관이 없는 경우
+			if (index < nodeLeft || index > nodeRight) { return this->rangeMin[node]; }
 
-	public :
+			/* 터미널 노드 (Leaf node, a node of a tree data structure that has no child nodes.)일 경우 */
+			if (nodeLeft == nodeRight) { return this->rangeMin[node] = newValue; }
+		
+			const int mid = (nodeLeft + nodeRight) / 2;
+			return rangeMin[node] = min(update(index, newValue, node * 2, nodeLeft, mid), update(index, newValue, node * 2 + 1, mid + 1, nodeRight));
+		}
+
+	public:
 		const int query(int left, int right) { return this->query(left, right, 1, 0, length - 1); } // Time Complxity - log(n)
+		const int update(int index, int newValue) { return this->update(index, newValue, 1, 0, length - 1); }
 } RMQ;
 ```
 
