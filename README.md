@@ -362,7 +362,8 @@ typedef struct RMQ {
 			const int mid = (nodeLeft + nodeRight) / 2;
 			return min(query(left, right, node * 2, nodeLeft, mid), query(left, right, node * 2 + 1, mid + 1, nodeRight));
 		} // 노드가 표현하는 구간이 찾고자하는 구간에 완전히 포함되거나 아예 겹쳐지지 않는 경우에는 탐색을 종료한다.
-	
+		
+		// Array[Index] = newValue로 바뀌었을 때 node를 루트로 하는 구간 트리를 갱신하고 노드가 표현하는 구간의 최소치를 반환한다.
 		const int update(int index, int newValue, int node, int nodeLeft, int nodeRight) {
 		
 			// Index가 노드가 표현하는 구간과 상관이 없는 경우
