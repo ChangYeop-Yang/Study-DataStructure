@@ -344,7 +344,8 @@ typedef struct RMQ {
 		const int mid = (left + right) / 2;
 		const int leftMin = init(arr, left, mid, node * 2);
 		const int rightMin = init(arr, mid + 1, right, node * 2 + 1);
-
+		
+		/* 구간 합 또는 곱으로 구현하고 싶은 경우에는 return this->rangeMin[node] = init(arr, left, mid, node * 2) + init(arr, mid + 1, right, node * 2 + 1)로 변경한다. */
 		return this->rangeMin[node] = min(leftMin, rightMin); // Time Complxity - log(n)
 	}
 
@@ -353,7 +354,7 @@ typedef struct RMQ {
 		const int query(int left, int right, int node, int nodeLeft, int nodeRight) {
 
 			// 두 구간이 겹치지 않으면 아주 큰 값을 반환한다. (교집합이 공집합인 경우)
-			if (right < nodeLeft || nodeRight < left) { return INT_MAX; }
+			if (right < nodeLeft || nodeRight < left) { return INT_MAX; } /* 구간 합 또는 곱으로 변경시 1 또는 0으로  */
 
 			// Node가 표현하는 범위 Array[nodeLeft, NodeRight]에 완전히 포함되는 경우
 			if (left <= nodeLeft && nodeRight <= right) { return this->rangeMin[node]; }
@@ -373,6 +374,7 @@ typedef struct RMQ {
 			if (nodeLeft == nodeRight) { return this->rangeMin[node] = newValue; }
 		
 			const int mid = (nodeLeft + nodeRight) / 2;
+			/* 구간 합 또는 곱으로 변경시에는 update(index, newValue, node * 2, nodeLeft, mid) + update(index, newValue, node * 2 + 1, mid + 1, nodeRight) 로 변경한다. */
 			return rangeMin[node] = min(update(index, newValue, node * 2, nodeLeft, mid), update(index, newValue, node * 2 + 1, mid + 1, nodeRight));
 		}
 
