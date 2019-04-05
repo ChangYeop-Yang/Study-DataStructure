@@ -167,6 +167,8 @@ void mergeSort(vector<int> & arr, int left, int right) {
 
 * 프린터의 출력 처리나 윈도 시스템의 메시지 처리기, 프로세스 관리 등 데이터가 입력된 시간 순서대로 처리해야 할 필요가 있는 상황에 이용된다.
 
+※ Queue Swift Source Code
+
 ```swift
 public struct Queue<T> {
     fileprivate var array = [T]()
