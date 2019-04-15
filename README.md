@@ -514,7 +514,7 @@ void BFS(const int start, const int vertax) {
 
 * 아니면 시험적 거리가 가장 작은 다음 미방문 꼭짓점을 새로운 "현재 위치"로 선택하고 3단계로 되돌아간다.
 
-###### ※ Dijkstra Algorithm Source Code
+###### ※ Dijkstra Algorithm C++ Source Code
 
 ```C++
 #define PAIR pair<int, int>
