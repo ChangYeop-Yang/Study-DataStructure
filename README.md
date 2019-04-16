@@ -51,7 +51,7 @@ void insertSort(int * arr, int size) {
 
 * 분할된 두 개의 작은 리스트에 대해 재귀(Recursion)적으로 이 과정을 반복한다. 재귀는 리스트의 크기가 0이나 1이 될 때까지 반복된다.
 
-###### ※ Quick Sort Source Code
+###### ※ Quick Sort C++ Source Code
 
 ```C++
 #define SWAP(X, Y, Z) Z=X; X=Y; Y=Z;
@@ -78,6 +78,30 @@ void QuickSort(int * mArr, int left, int right)
 
 	if (left < mRight) { QuickSort(mArr, left, mRight); }
 	if (mLeft < right) { QuickSort(mArr, mLeft, right); }
+}
+```
+
+###### ※ Quick Sort Swift Source Code
+
+```swift
+func QuickSort(array: inout [Int], left: Int, right: Int) {
+    
+    var mLeft = left, mRight = right
+    let pivot: Int = array[(left + right) / 2]
+    
+    while mLeft <= mRight {
+        while array[mLeft] < pivot  { mLeft     = mLeft + 1 }
+        while array[mRight] > pivot { mRight    = mRight - 1 }
+        
+        if mLeft <= mRight {
+            array.swapAt(mLeft, mRight)
+            mLeft = mLeft + 1
+            mRight = mRight - 1
+        }
+    }
+    
+    if left < mRight { QuickSort(array: &array, left: left, right: mRight) }
+    if mLeft < right { QuickSort(array: &array, left: mLeft, right: right) }
 }
 ```
 
