@@ -271,7 +271,7 @@ decrement_address_one = (address + Length - 1) % Length
 
 * A B+ tree is the same as a B tree; the only difference is that, in the B+ tree there is an additional level added at the bottom with linked leaves. Also, unlike the B tree, each node in a B+ tree contains only keys and not key–value pairs.
 
-#### ※ 트라이 (Trie)
+#### 📦 트라이 (Trie)
 
 <p align="center">
 	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Trie_example.svg/250px-Trie_example.svg.png" />
@@ -279,7 +279,9 @@ decrement_address_one = (address + Length - 1) % Length
 
 * In computer science, a trie, also called digital tree, radix tree or prefix tree, is a kind of search tree—an ordered tree data structure used to store a dynamic set or associative array where the keys are usually strings. Unlike a binary search tree, no node in the tree stores the key associated with that node; instead, its position in the tree defines the key with which it is associated. All the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string. Keys tend to be associated with leaves, though some inner nodes may correspond to keys of interest. Hence, keys are not necessarily associated with every node. For the space-optimized presentation of prefix tree, see compact prefix tree.
 
-##### ※ Trie Source Code
+* 컴퓨터 과학에서 디지털 트리, 기수 트리 또는 접두사 트리라고도하는 트리는 일종의 검색 트리로, 키가 일반적으로 문자열 인 동적 세트 ​​또는 연관 배열을 저장하는 데 사용되는 정렬 트리 데이터 구조입니다. 이진 검색 트리와 달리 트리의 노드는 해당 노드와 관련된 키를 저장하지 않습니다. 대신 트리에서의 위치는 연관된 키를 정의합니다. 노드의 모든 하위 항목에는 해당 노드와 연관된 문자열의 공통 접두사가 있으며 루트는 빈 문자열과 연관됩니다. 일부 내부 노드는 트리의 계층과 연관이 있는 키에 해당 할 수 있지만 키는 단말 노드와 연관되는 경향이 있습니다. 따라서 키가 반드시 모든 노드와 연관 될 필요는 없습니다.
+
+##### 📄 Trie C++ Source Code
 
 ```C++
 /* Trie의 각 노드들은 MAX_LEN 만큼의 자식노드들을 가질 수 있다. */
