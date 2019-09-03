@@ -1,4 +1,3 @@
-/* 퀵 정렬 */
 void QuickSort(int * mArr, int left, int right)
 {
 	int pivot = mArr[(left + right) / 2]; /* 중심축 */
